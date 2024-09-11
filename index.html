@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <style>
+
+        /* Body is display screen of the monitor */
+        body{
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+            background-color: white;            
+        }
+        /* Chess Board table is used to display the images clearly and  effective way */
+        table.chessboard{
+            border: 2px solid;
+            border-collapse: collapse;
+            font-size: 40px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /*  Empty spaces of the chess board which is used as table data */
+        table.chessboard td{
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        /* To color the check boxes as green */
+        table.chessboard tr:nth-child(even) td:nth-child(odd), 
+        table.chessboard tr:nth-child(odd) td:nth-child(even){
+            background-color: lightgreen;
+            cursor: pointer;
+        }
+
+        /* To color the check boxes as white */
+        table.chessboard tr:nth-child(even) td:nth-child(even),
+        table.chessboard tr:nth-child(odd) td:nth-child(odd){
+            /* background-color: white; */
+            cursor: pointer;
+        }
+
+        table.chessboard td:hover {
+            background-color: pink;
+        }
+
+        /* Tooltip */
+        .tooltip{
+            color: blueviolet;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0px;
+            padding: 55px 10px 25px;
+
+            position: relative;
+            display: inline-block;
+            
+
+        }
+        .tooltip .tooltiptext{
+            visibility: hidden;
+            width: 150px;
+            background-color: black;
+            color: aqua;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            /* Position of the tooltip */
+            position: absolute;
+            z-index: 1;
+            left: 100%;
+        }
+        .tooltip:hover .tooltiptext{
+            visibility: visible;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <center>
+    <!-- Tooltip  -->
+     <div class="tooltip"> CHESS GAME
+        <span class="tooltiptext">CHESS BOARD <mark> &#9816; </mark></span>
+     </div>
+        
+
+
+
+    <table class="chessboard">
+        
+
+        <!-- 1st row White  -->
+         <tr>
+            <td>&#9814;</td>
+            <td>&#9816;</td>
+            <td>&#9815;</td>
+            <td>&#9813;</td>
+            <td>&#9812;</td>
+            <td>&#9815;</td>
+            <td>&#9816;</td>
+            <td>&#9814;</td>
+         </tr>
+         <!-- 2nd row White Pawns -->
+         <tr>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+        </tr>
+         <!-- 3rd row empty check boxes -->
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!-- 4th row empty check boxes -->
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!-- 5th row empty check boxes -->
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!-- 6th row empty check boxes -->
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        <!-- 7th Row: Black pawns -->
+        <tr>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+         </tr>
+        <!-- 8th Row: Black pieces -->
+        <tr>
+            <td>&#9820;</td>
+            <td>&#9822;</td>
+            <td>&#9821;</td>
+            <td>&#9819;</td>
+            <td>&#9818;</td>
+            <td>&#9821;</td>
+            <td>&#9822;</td>
+            <td>&#9820;</td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>
